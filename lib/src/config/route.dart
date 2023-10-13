@@ -12,15 +12,18 @@ class Routes {
     };
   }
 
-  static Route onGenerateRoute(RouteSettings settings) {
-    final List<String> pathElements = settings.name.split('/');
-    if (pathElements[0] != '' || pathElements.length == 1) {
-      return null;
-    }
-    switch (pathElements[1]) {
-      case "DetailPage":
-        return CustomRoute<bool>(
-            builder: (BuildContext context) => DetailPage(model: settings.arguments,));
-    }
+  static Route<dynamic> onGenerateRoute(RouteSettings settings) {
+  final List<String> pathElements = settings.name.split('/');
+  if (pathElements[0] != '' || pathElements.length == 1) {
+    return MaterialPageRoute(builder: (context) => SomeDefaultPage()); // Replace with your default page
+  }
+  switch (pathElements[1]) {
+    case "DetailPage":
+      return MaterialPageRoute(
+        builder: (BuildContext context) => DetailPage(model: settings.arguments),
+      );
+    default:
+      return MaterialPageRoute(builder: (context) => UnknownPage()); // Handle unknown routes
   }
 }
+
