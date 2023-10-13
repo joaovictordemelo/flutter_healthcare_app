@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 import 'light_color.dart';
 
 class AppTheme {
@@ -9,7 +10,7 @@ class AppTheme {
     primaryColor: LightColor.purple,
     cardTheme: CardTheme(color: LightColor.background),
     iconTheme: IconThemeData(color: LightColor.iconColor),
-    bottomAppBarColor: LightColor.background,
+    bottomAppBarTheme: BottomAppBarTheme(color: LightColor.background),
     dividerColor: LightColor.grey,
   );
 
