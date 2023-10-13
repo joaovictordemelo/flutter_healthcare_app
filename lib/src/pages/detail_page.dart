@@ -6,6 +6,7 @@ import 'package:flutter_healthcare_app/src/theme/theme.dart';
 import 'package:flutter_healthcare_app/src/theme/extention.dart';
 import 'package:flutter_healthcare_app/src/widgets/progress_widget.dart';
 import 'package:flutter_healthcare_app/src/widgets/rating_start.dart';
+import 'package:flutter/material.dart';
 
 class DetailPage extends StatefulWidget {
   DetailPage({Key key, this.model}) : super(key: key);
