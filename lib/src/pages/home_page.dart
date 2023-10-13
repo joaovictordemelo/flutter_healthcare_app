@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
   Widget _appBar() {
     return AppBar(
       elevation: 0,
-      backgroundColor: Theme.of(context).backgroundColor,
+      backgroundColor: Theme.of(context).colorScheme.background,
       leading: Icon(
         Icons.short_text,
         size: 30,
@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
             // height: 40,
             // width: 40,
             decoration: BoxDecoration(
-              color: Theme.of(context).backgroundColor,
+              color: Theme.of(context).colorScheme.background,
             ),
             child: Image.asset("assets/user.png", fit: BoxFit.fill),
           ),
@@ -306,7 +306,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBar(),
-      backgroundColor: Theme.of(context).backgroundColor,
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: CustomScrollView(
         slivers: <Widget>[
           SliverList(
